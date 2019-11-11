@@ -1,0 +1,56 @@
+.restaurant-pic {
+	height: 50vh;
+	background: url('https://i1.wp.com/www.fiz-x.com/wp-content/uploads/2017/01/Los-Pollos-Hermanos.jpg?resize=818%2C458');
+	background-color: #fdfd96;
+	background-size: auto;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.reservation {
+	height: 25vh;
+}
+
+.reservation-form-container {
+	position: relative;
+	height: 150%;
+	background: url('https://cdn1.thr.com/sites/default/files/imagecache/768x433/2019/10/a_view_of_the_los_pollos_hermanos_signage_-getty_-_h_2019_.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.reservation-form {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.restaurant-locator {
+	height: 50vh;
+}
+
+.restaurant-hours {
+	background-color: #fdfd96;
+}
+
+#map {
+	height: 400px;
+}
+
+h2, h3, h4 {
+	text-align: center;
+}
+
+.hours-list {
+	text-align: center;
+	list-style: inside;
+	justify-content: center;
+}
+
+.current-date {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-style: bold;
+	justify-content: center;
+}

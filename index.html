@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Los Pollos Hermanos</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body data-spy="scroll" data-target=".navbar-inverse" data-offset="50">
+
+	<!-- template for reservation-list -->
+	<script id="reservation-template" type="text/x-handlebars-template">
+		<tr>
+			<td>{{name}}</td>
+			<td>{{day}}</td>
+		</tr>
+	</script>
+
+	<!-- navbar -->
+	<div id="navbar" class="navbar-collapse navbar-inverse collapse navbar-fixed-top">
+		<a href="#" class="navbar-brand">Los Pollos Hermanos</a>
+		<ul class="nav navbar-nav navbar-right">
+		  <li class="active"><a href="#reservation">Reservation</a></li>
+		  <li><a href="#map">Map</a></li>
+		</ul>
+	</div>
+
+	<div class="container-fluid restaurant-pic">
+		<div class="row">
+			<div class="col-md-12"></div>
+		</div>
+	</div>
+
+	<div class="container-fluid restaurant-hours">
+		<h3><b>Our Hours</b></h3>
+		<ul class="hours-list">
+			<li>Mondays: 7AM-10PM</li>
+			<li>Tuesdays: 7AM-10PM</li>
+			<li>Wednesdays: 7AM-10PM</li>
+			<li>Thursdays: 7AM-10PM</li>
+			<li>Fridays: 7AM-12AM</li>
+			<li>Saturdays: 7AM-12AM</li>
+			<li>Sundays: 7AM-9PM</li>
+		</ul>
+		<center><p id="current-date"></p></center>
+	</div>
+
+	<div id="reservation" class="container-fluid reservation">
+
+		<!-- reservation form -->
+		<div class="row reservation-form-container">
+			<div class="col-md-12 text-center reservation-form">
+				<form class="form-inline reservations">
+				  <div class="form-group">
+				    <input type="text" class="form-control reservation-name" placeholder="Gustavo Fring">
+				  </div>
+				  <div class="form-group">
+						<div class="dropdown">
+						  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+						    Select A Day
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu reservation-day">
+						    <li><a>Monday</a></li>
+						    <li><a>Tuesday</a></li>
+						    <li><a>Wednesday</a></li>
+						    <li><a>Thursday</a></li>
+						    <li><a>Friday</a></li>
+						    <li><a>Saturday</a></li>
+						    <li><a>Sunday</a></li>
+						  </ul>
+						</div>
+				  </div>
+				  <button class="btn btn-default reservation-button">Set Reservation</button>
+				</form>
+			</div>
+		</div>
+
+		<!-- reservations -->
+		<table class="table table-striped col-md-12 container-fluid">
+			<h4><b>Reservations</b></h4>
+			<thead>
+				<th>Name</th>
+				<th>Day</th>
+			</thead>
+			<tbody class="reservation-list"></tbody>
+		</table>
+	</div>
+
+	<div id="map" class="container-fluid restaurant-locator"></div>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+  <!-- bootstrap js -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- handlebars -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <!-- custom js -->
+  <script src="js/main.js"></script>
+
+	<!-- google maps -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd94ABqjd9IprmWRqcPuUJhu9nK__254Q&callback=initMap" async defer></script>
+</body>
+</html>
